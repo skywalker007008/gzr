@@ -1,6 +1,7 @@
 #include <iostream>
 #include <thread>
 #include "schedule.h"
+#include "route.h"
 
 using namespace std;
 
@@ -39,9 +40,7 @@ void insert_execute(Event* event) {
 }
 
 int main() {
-    test_schedule();
-    while (true) {
-
-    }
+    //test_schedule();
+    test_pop();
     return 0;
 }

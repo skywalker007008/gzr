@@ -9,6 +9,6 @@ set(SOURCE_FILES main.cpp
         schedule.h
         timer.h
         schedule.cpp
-        queue.h )
+        queue.h route.h route.cpp)
 add_executable(schedule ${SOURCE_FILES})
 target_link_libraries(schedule ${CMAKE_THREAD_LIBS_INIT})

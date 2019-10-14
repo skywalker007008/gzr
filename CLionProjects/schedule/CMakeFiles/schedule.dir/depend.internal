@@ -4,7 +4,11 @@
 CMakeFiles/schedule.dir/main.cpp.o
  /home/buaa/CLionProjects/schedule/main.cpp
  /home/buaa/CLionProjects/schedule/queue.h
+ /home/buaa/CLionProjects/schedule/route.h
  /home/buaa/CLionProjects/schedule/schedule.h
+CMakeFiles/schedule.dir/route.cpp.o
+ /home/buaa/CLionProjects/schedule/route.cpp
+ /home/buaa/CLionProjects/schedule/route.h
 CMakeFiles/schedule.dir/schedule.cpp.o
  /home/buaa/CLionProjects/schedule/queue.h
  /home/buaa/CLionProjects/schedule/schedule.cpp

@@ -13,8 +13,32 @@ thread
 -
 schedule.h
 /home/buaa/CLionProjects/schedule/schedule.h
+route.h
+/home/buaa/CLionProjects/schedule/route.h
 
 /home/buaa/CLionProjects/schedule/queue.h
+
+/home/buaa/CLionProjects/schedule/route.cpp
+cstdio
+-
+cstring
+-
+cstdlib
+-
+iostream
+-
+vector
+-
+route.h
+/home/buaa/CLionProjects/schedule/route.h
+arpa/inet.h
+/home/buaa/CLionProjects/schedule/arpa/inet.h
+
+/home/buaa/CLionProjects/schedule/route.h
+string
+-
+vector
+-
 
 /home/buaa/CLionProjects/schedule/schedule.cpp
 zconf.h
