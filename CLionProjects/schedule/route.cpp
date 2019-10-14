@@ -7,6 +7,8 @@
 #include "route.h"
 #include "arpa/inet.h"
 
+#define bit_8(value, byte_num) ((value) >> ((byte_num) * 8) & 0xFF)
+
 /*
  * Copyright G410 Studio
  * Author: Skywalker007008, Liu Zihao
@@ -93,7 +95,10 @@ void read_route(vector<Route>& routing_table) {
                 }
                 case 2: {
                     //routing_table[i - 1].genmask = read_genmask(typestr[j]);
-                    route.genmask = (inet_addr(typestr[j].c_str()));
+                    uint32_t a = (inet_addr(typestr[j].c_str()));
+                    route.genmask = bit_8(a, 0) << 24 | bit_8(a, 1) << 16 | bit_8(a, 2) << 8 | bit_8(a, 3);
+                    //route.genmask = (inet_addr(typestr[j].c_str()));
+                    printf("%d %d\n", a, route.genmask);
                     state++;
                     break;
                 }
@@ -135,15 +140,15 @@ void read_route(vector<Route>& routing_table) {
 void print_route(Route& route) {
     cout << "Route " << route.id << endl;
     //cout << "Dest: " << route.dest << endl;
-    cout << "Dest: " << route.dest / (256 * 65536) << "." \
-                        << ((route.dest % (256 * 256 * 256)) / 65536) << "." \
+    cout << "Dest: " << ((route.dest % 65536) % 256) << "." \
                         << (route.dest % 65536) / 256 << "." \
-                        << ((route.dest % 65536) % 256) << endl;
+                        << ((route.dest % (256 * 256 * 256)) / 65536) << "." \
+                        << route.dest / (256 * 65536) << endl;
     //cout << "Gateway: " << route.gateway << endl;
-    cout << "Gateway: " << route.gateway / (256 * 65536) << "." \
-                        << ((route.gateway % (256 * 256 * 256)) / 65536) << "." \
+    cout << "Gateway: " << ((route.gateway % 65536) % 256) << "." \
                         << (route.gateway % 65536) / 256 << "." \
-                        << ((route.gateway % 65536) % 256) << endl;
+                        << ((route.gateway % (256 * 256 * 256)) / 65536) << "." \
+                        << route.gateway / (256 * 65536) << endl;
     cout << "Genmask: " << route.genmask / (256 * 65536) << "." \
                         << ((route.genmask % (256 * 256 * 256)) / 65536) << "." \
                         << (route.genmask % 65536) / 256 << "." \

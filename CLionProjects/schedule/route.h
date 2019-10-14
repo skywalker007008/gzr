@@ -18,7 +18,7 @@ typedef struct {
     int id;
     uint32_t dest;
     uint32_t gateway;
-    int genmask;
+    uint32_t genmask;
     string flags;
     int metric;
     int ref;
