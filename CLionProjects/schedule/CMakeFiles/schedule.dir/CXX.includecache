@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/buaa/CLionProjects/schedule/main.cpp
+iostream
+-
+thread
+-
+schedule.h
+/home/buaa/CLionProjects/schedule/schedule.h
+
+/home/buaa/CLionProjects/schedule/queue.h
+
+/home/buaa/CLionProjects/schedule/schedule.cpp
+zconf.h
+-
+pthread.h
+-
+schedule.h
+/home/buaa/CLionProjects/schedule/schedule.h
+iostream
+-
+cstring
+-
+
+/home/buaa/CLionProjects/schedule/schedule.h
+queue.h
+/home/buaa/CLionProjects/schedule/queue.h
+

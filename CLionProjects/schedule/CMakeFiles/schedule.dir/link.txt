@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/schedule.dir/main.cpp.o CMakeFiles/schedule.dir/schedule.cpp.o  -o schedule -lpthread 
